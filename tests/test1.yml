@@ -1,0 +1,21 @@
+---
+- name: Bring up docker containers
+  hosts: localhost
+  vars:
+    inventory:
+      - name: provision_docker_host_one
+        image: "chrismeyers/centos7"
+  roles:
+    - { role: provision_docker, provision_docker_privileged: "{{ true }}", provision_docker_inventory: "{{ inventory }}", DEFAULT_DOCKER_API_VERSION: 1.21 }
+
+- name: Run Tests
+  hosts: docker_containers
+  pre_tasks:
+    - name: Install yum-langpacks for docker container
+      package:
+        name: yum-langpacks
+        state: latest
+  roles:
+    # Role under test
+    - { role: jboss_common, transfer_method: copy-from-controller }
+    - { role: jboss_eap, transfer_method: copy-from-controller }

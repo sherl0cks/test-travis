@@ -2,9 +2,10 @@ language: python
 python:
   - "2.7"
 # command to install dependencies
-install:  pip install ansible==2.1.0.0
+install: pip install ansible==2.1.0.0
+install: pip install docker-py==1.7.2
 # command to run tests
 script:
-  - cd files && pwd
-  - pwd && wget http://files.justinholmes.co/jboss-eap-6.4.0.zip
-  - pwd && wget http://files.justinholmes.co/jboss-eap-6.4.7-patch.zip
+  - cd files
+  - wget http://files.justinholmes.co/jboss-eap-6.4.0.zip
+  - wget http://files.justinholmes.co/jboss-eap-6.4.7-patch.zip
