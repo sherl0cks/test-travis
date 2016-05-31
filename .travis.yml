@@ -5,7 +5,7 @@ python:
 # command to install dependencies
 install:
   - sudo pip install ansible==2.0.2.0
-  - sudo pip install docker-py==1.7.2
+  - sudo pip install docker-py==1.6.0
   - sudo pip install six --upgrade
 
 services:
