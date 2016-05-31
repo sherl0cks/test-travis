@@ -1,6 +1,6 @@
 ---
 - name: Unarchive fails with files with spaces
-  hosts: localhost
+  hosts: unarchive_bug_host
   tasks:
   - unarchive:
       src: files/licenses.zip
