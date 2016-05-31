@@ -1,2 +1,8 @@
 - src: chrismeyersfsu.provision_docker
   name: provision_docker
+
+- src: rhtconsulting.jboss_eap
+  name: jboss_eap
+
+- src: rhtconsulting.jboss_common
+  name: jboss_common
