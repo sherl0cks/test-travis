@@ -1,0 +1,8 @@
+language: python
+python:
+  - "2.7"
+# command to install dependencies
+install:  pip install ansible==2.1.0.0
+# command to run tests
+script:
+  - cd files && wget http://files.justinholmes.co/jboss-eap-6.4.0.zip
