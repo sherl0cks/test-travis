@@ -1,6 +1,7 @@
 ---
 - name: Bring up docker containers
   hosts: localhost
+  become: true
   vars:
     inventory:
       - name: provision_docker_host_one

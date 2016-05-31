@@ -13,7 +13,7 @@ services:
 script:
   - ansible-galaxy install -r tests/requirements.yml -p tests/roles
   - cd tests/files
-  - wget http://files.justinholmes.co/jboss-eap-6.4.0.zip
-  - wget http://files.justinholmes.co/jboss-eap-6.4.7-patch.zip
+#  - wget http://files.justinholmes.co/jboss-eap-6.4.0.zip
+#  - wget http://files.justinholmes.co/jboss-eap-6.4.7-patch.zip
   - cd ..
   - ansible-playbook test1.yml -i inventory
